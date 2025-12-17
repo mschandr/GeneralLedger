@@ -1,9 +1,9 @@
-GeneralLedger  [![Build Status](https://travis-ci.org/icomefromthenet/GeneralLedger.svg?branch=master)](https://travis-ci.org/icomefromthenet/GeneralLedger)
+GeneralLedger  
 =============
 
 General Ledger for PHP and MySql.
 
-A [general ledger](https://www.google.com.au/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8&client=ubuntu#q=define%3Ageneral%20ledger) is a complete record of financial transactions over the life of a company. The ledger holds account information that is needed to prepare financial statements, and includes accounts for assets, liabilities, owners' equity, revenues and expenses.
+A [general ledger]([https://en.wikipedia.org/wiki/General_ledger]) is a complete record of financial transactions over the life of a company. The ledger holds account information that is needed to prepare financial statements, and includes accounts for assets, liabilities, owners' equity, revenues and expenses.
 
 
 Installing
@@ -12,7 +12,7 @@ Installing
 Step 1. You can install this library using composer. 
 
 ```json
-    icomefromthenet/ledger : 1.0.*
+    icomefromthenet/ledger : 2.0.*
 ```
 
 Step 2. Create a new database called 'general_ledger' and run the database build script under database/database.sql
@@ -229,8 +229,6 @@ foreach($oTrialBalance => $oLedgerBalance) {
     echo $oLedgerBalance->fCredit;
     
 }
-
-
 ```
 
 Chart of Accounts
@@ -239,7 +237,3 @@ Chart of Accounts
 2. Need one or more accounts with is_left = true (Debit) and one or more accounts with is_right = true (credit).
 3. Other accounts should inherit from these top level accounts.
 4. Yep its a tree.
-
-
-
-
