@@ -56,8 +56,8 @@ abstract class CommonEntity implements ActiveRecordInterface
             }
         }
         else {
-            mt_srand( (double)microtime() * 10000 );    // optional for php 4.2.0 and up.
-            $charid = strtoupper( md5(uniqid(rand(), true)) );
+            mt_srand( (int)(microtime(true) * 10000) );    // optional for php 4.2.0 and up.
+            $charid = strtoupper( md5(uniqid((string)rand(), true)) );
             $hyphen = chr( 45 );    // "-"
             $left_curly = $opt ? chr(123) : "";     //  "{"
             $right_curly = $opt ? chr(125) : "";    //  "}"
